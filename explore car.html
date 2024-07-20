@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;
+    0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="img/favicon.ico" rel="icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <!-- Customized Bootstrap Stylesheet -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Template Stylesheet -->
+    <!-- <link href="css/style.css" rel="stylesheet">  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Cars Rentals</title>
+</head>
+
+<body>
+    <script src="/js/main.js"></script>
+    <header class="header">
+        <a href="index.html" class="logo">CARS<i class='bx bx-color'></i><span>WEB.</span></a>
+
+        <nav class="navbar">
+            <a href="index.html" style="--i:1;">Home</a>
+            <a href="about.html" style="--i:2;">About</a>
+            <a href="#" style="--i:4;" class="active">Cars</a>
+            <a href="review.html" style="--i:3;">Review</a>
+            <a href="blog.html" style="--i:4;">Blog</a>
+            <a href="contact.html" style="--i:5;">Contact</a>
+        </nav>
+        <div class="login">
+            <a href="https://www.google.com/"><i class='bx bx-user-circle'></i></a>
+        </div>
+        <div class="social-media2">
+            <a href="#" style="--i:1;"><i class='bx bxl-twitter'></i></a>
+            <a href="#" style="--i:2;"><i class='bx bxl-facebook'></i></a>
+            <a href="#" style="--i:3;"><i class='bx bxl-instagram-alt'></i></a>
+        </div>
+    </header>
+
+    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/car coursal blue 5.5.1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/blue coursal car parts 7.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/car coursal blue 3.3.1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/blue coursal car mtr 3.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- <div>
+        <div class="container-img">
+            <img src="/images/car coursal blue 5.avif">
+        </div>
+    </div> -->
+    <div class="search-form">
+        <div class="form-container">
+            <div class="box1">
+                <select class="box-at" style="height: 50px;">
+                    <option selected>Pickup Location</option>
+                    <option value="1">Location 1</option>
+                    <option value="2">Location 2</option>
+                    <option value="3">Location 3</option>
+                </select>
+            </div>
+            <div class="box2">
+                <select class="box-bt" style="height: 50px;">
+                    <option selected>Drop Location</option>
+                    <option value="1">Location 1</option>
+                    <option value="2">Location 2</option>
+                    <option value="3">Location 3</option>
+                </select>
+            </div>
+            <div class="box3">
+                <div class="date-ct" id="date">
+                    <input type="text" placeholder="Pickup Date" style="height: 50px;" onfocus="this.type='date'"
+                        onblur="this.type='text'" />
+                </div>
+            </div><br><br>
+            <div class="box4">
+                <div class="time-dt" id="time" data-target-input="nearest">
+                    <input type="text" placeholder="Pickup Time" onfocus="this.type='time'" onblur="this.type='text'"
+                        style="height: 50px;" />
+                </div>
+            </div>
+            <div class="box5">
+                <select class="box-et" style="height: 50px;">
+                    <option selected>Select A Car</option>
+                    <option value="1">Car 1</option>
+                    <option value="2">Car 1</option>
+                    <option value="3">Car 1</option>
+                </select>
+            </div>
+            <div class="box-btn6">
+                <button class="btn btn-primary" type="submit" style="height: 50px;">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="cars-heading">
+            <h1>Find Your Car</h1>
+        </div>
+        <div class="main-col-container">
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/bmw-m5-orange bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Mercedes Benz R3</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/bmw-m5-4k-z0p02flq1og6aybg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Mercedes Benz R3</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/bmw-m5-car3.png" alt="">
+                    </div>
+                    <h4 class="text-title">BMW Car-M5</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/Jaguar X J Ultimate-car-Sedan-car4.png" alt="">
+                    </div>
+                    <h4 class="text-title">Jaguar XJ Ultimate</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/hyundai_exter-7-bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Hyundai Exterior 7</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/jeep_grand cherokee-bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Jeep Grand Cherokee</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/Mazda 3 _bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Mazda 3</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/mercedes car bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Mercedes AMG GTR</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/garvin-st-villier-bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Chevrolet Corvette ZR1</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/garvin-st-villier-39bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Subaru Impreza WRX</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/AMG_mersedes-bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Mercedes Benz G63 AMG</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/bmw-3-series-gran-turismo_.png" alt="">
+                    </div>
+                    <h4 class="text-title">BMW 330i Gran Turismo</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2014 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/arteum-ro-oa_bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">BMW 6 Series</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/hyundai_alcazar_bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Hyundai Alcazar</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/hyundai-creta-2024_bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Hyundai Creta 2024</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/mahindra_Xuv300-2_6526_bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Mahindra XUV 300</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/Mahindra_thar-3_18618_bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Mahindra thar 3</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/mahindra-xuv400-EV_249_bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Mahindra-XUV 400 EV</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/Jeep_Compass_11991_bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Jeep Compass</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/Suzuki-Vitara_Hybrid-2020-bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Suzuki-Vitara Hybrid</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/maruti_wagon-r_8284_bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Maruti Wagon R</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/maruti_suzuki_celerio-2_346_bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Maruti Suzuki Celerio</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/maruti_suzuki_baleno_49765_bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Maruti Suzuki Baleno</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/Maruti_Ertiga-479_bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Maruti Ertiga</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/Maruti_dzire_158_bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Maruti Suzuki Desire</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/mahindra_xuv700_1118_bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Mahindra XUV 700</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/jeep-removebg-bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Jeep Wrangler</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-container">
+                <div class="rent-item">
+                    <div class="img-fluid">
+                        <img src="images/suzuki-vitara_2015-bg1.png" alt="">
+                    </div>
+                    <h4 class="text-title">Maruti Suzuki Vitara</h4>
+                    <div class="cars-info">
+                        <div class="px-2">
+                            <i class="fa fa-car"></i>
+                            <span>2015 |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-cogs"></i>
+                            <span>AUTO |</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road"></i>
+                            <span>25K</span>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <a class="btn-price" href="https://www.google.com/">$99.00/Day</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <section class="footer">
+        <div class="footer-container container">
+            <div class="footer-box">
+                <a href="#" class="logo">CARS<i class='bx bx-color'></i><span>WEB.</span></a>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-facebook-square' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <h3>Page</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="explore car.html">Cars</a>
+                <a href="review.html">Review</a>
+                <a href="blog.html">blog</a>
+            </div>
+            
+            <div class="footer-box">
+                <h3>Legal</h3>
+                <a href="#">Privacy</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p>United States</p>
+                <p>Japan</p>
+                <p>Germany</p>
+                <p></p>
+            </div>
+
+        </div>
+
+    </section>
+    <div class="copyright">
+        <p>&#169;  Carsweb All Right Reserved</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
